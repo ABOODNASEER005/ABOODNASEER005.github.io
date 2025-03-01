@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array vs Matrices</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Table Styles */
+    table {
+      width: 80%;
+      max-width: 800px;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #6200ea;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      table {
+        width: 95%;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ARRAY VS MATRICES</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>NumPy Array</th>
+        <th>NumPy Matrix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dimensions</strong></td>
+        <td>Can be n-dimensional (1D, 2D, 3D, etc.)</td>
+        <td>Strictly 2-dimensional</td>
+      </tr>
+      <tr>
+        <td><strong>Creation</strong></td>
+        <td><code>np.array()</code></td>
+        <td><code>np.matrix()</code></td>
+      </tr>
+      <tr>
+        <td><strong>Multiplication</strong></td>
+        <td><code>*</code> is element-wise; <code>@</code> or <code>np.dot()</code> for matrix multiplication</td>
+        <td><code>*</code> is matrix multiplication</td>
+      </tr>
+      <tr>
+        <td><strong>Element-wise Operations</strong></td>
+        <td>Default behavior</td>
+        <td>Requires <code>np.multiply()</code></td>
+      </tr>
+      <tr>
+        <td><strong>Broadcasting</strong></td>
+        <td>Supported</td>
+        <td>Limited support</td>
+      </tr>
+      <tr>
+        <td><strong>Flexibility</strong></td>
+        <td>Highly flexible</td>
+        <td>Limited to linear algebra operations</td>
+      </tr>
+      <tr>
+        <td><strong>Deprecation Status</strong></td>
+        <td>Standard and recommended</td>
+        <td>Deprecated; use arrays instead</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
